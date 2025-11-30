@@ -1,0 +1,27 @@
+package com.example.advanceduinavapp
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+
+class HomeFragment : Fragment() {
+
+  override fun onCreateView(
+    inflater: LayoutInflater, container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View {
+    // Inflate the layout directly without View Binding
+    return inflater.inflate(R.layout.fragment_home, container, false)
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+
+    // Access the TextView using findViewById
+    val textView = view.findViewById<TextView>(R.id.text_home)
+    textView.text = "Welcome to Home Page!"
+  }
+}
